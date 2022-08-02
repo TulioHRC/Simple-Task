@@ -2,6 +2,12 @@
 
 Like a logbook of the development of my application, to organize the progress of the project and put the ideas somewhere.
 
+## 0.1.1v (Server and Client)
+  - Server side creation
+  - Client side creation
+  - Client side organization
+  - Full-Stack test (npm run dev)
+
 ## 0.1.0v (Insight)
   - Planning (ReadMe, Log, GitHub repository)
 
