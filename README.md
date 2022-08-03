@@ -6,3 +6,5 @@ So, it's going to be a NodeJS-ReactJS project, using MongoDB as database. With t
 - Simple and easy to use
 - Fast to use (light)
 - Beautiful (being simple, like a minimalist style of HTML and CSS)
+
+Heroku Deploy - https://s1mple-task.herokuapp.com 
