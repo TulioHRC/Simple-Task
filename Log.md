@@ -2,6 +2,12 @@
 
 Like a logbook of the development of my application, to organize the progress of the project and put the ideas somewhere.
 
+## 0.1.2v (MongoDB)
+  - MongoDB connection
+  - Database creation (To-Do like)
+  - Client Side started
+  - Heroku Deploy
+
 ## 0.1.1v (Server and Client)
   - Server side creation
   - Client side creation
