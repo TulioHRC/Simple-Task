@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 
 import Form from "./Components/Form" // Form that will be open when the (+) button is clicked
+import Task from './Components/Task'
 
 
 class App extends Component {
@@ -10,8 +11,23 @@ class App extends Component {
 
     this.state = {
       isFormOpen: false,
-      tasks: {}
+      tasks: []
     }
+  }
+
+  loadTasks = () => {
+    fetch('/getTasks')
+      .then((res) => res.json())
+      .then((data) => {
+        this.setState((previousState) => ({
+          isFormOpen: previousState.isFormOpen,
+          tasks: data
+        }))
+      })
+  }
+
+  componentDidMount() {
+    this.loadTasks()
   }
 
   render(){
@@ -35,9 +51,7 @@ class App extends Component {
       }
 
       fetch("/newTask", init)
-        .then((data) => {
-          console.log("Posted")
-        })
+
     }
 
     let screenPopup = this.state.isFormOpen ? (<Form newTask={addTaskFunction} />) : (<></>)
@@ -46,6 +60,12 @@ class App extends Component {
       <div className="App">
 
         {screenPopup}
+
+        {
+          this.state.tasks.map((task) => {
+            return <Task key={task._id} data={task} />
+          })
+        }
         
         <button onClick={handleClickForm}>+</button>
       </div>

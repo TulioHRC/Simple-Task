@@ -24,10 +24,21 @@ let tasks = mongoose.model('tasks', taskSchema) // MongoDB model
 
 module.exports = (app) => {
 
-    app.post('/newTask', urlencodedParser, (req, res) => {
-        //let task = new tasks(JSON.parse(Object.keys(req.body)))
-        console.log(req.body)
-        res.send()
+    app.get('/getTasks', urlencodedParser, (req, res) => { // Loads the data from the database
+
+        tasks.find({}, (err, data) => {
+            if (err) console.log(err)
+            else res.json(data)
+        })
+
+    })
+
+    app.post('/newTask', urlencodedParser, (req, res) => { // Add task to database
+        let task = new tasks(JSON.parse(Object.keys(req.body)[0])) // Body turn into Task Model schema
+
+        task.save((err, data) => {
+            if (err) console.log(`When saving an error has occured, ${err}`)
+        })
     })
 
     console.log("MongoDB connection made...")

@@ -2,6 +2,11 @@
 
 Like a logbook of the development of my application, to organize the progress of the project and put the ideas somewhere.
 
+## 0.1.3v (To-Do)
+  - New tasks function
+  - Basically view tasks components ???
+  - Delete tasks function ????
+
 ## 0.1.2v (MongoDB)
   - MongoDB connection
   - Database creation (To-Do like)
