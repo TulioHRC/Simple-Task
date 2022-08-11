@@ -4,8 +4,8 @@ Like a logbook of the development of my application, to organize the progress of
 
 ## 0.1.3v (To-Do)
   - New tasks function
-  - Basically view tasks components ???
-  - Delete tasks function ????
+  - Basically view tasks components, with did button
+  - Delete tasks function
 
 ## 0.1.2v (MongoDB)
   - MongoDB connection

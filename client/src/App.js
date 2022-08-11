@@ -54,6 +54,34 @@ class App extends Component {
 
     }
 
+    const deleteTaskFunction = (id) => {
+
+      let headers = new Headers({'Content-Type': 'application/x-www-form-urlencoded'})
+
+      let init = {
+          method: 'POST',
+          headers: headers,
+          body: JSON.stringify(id)
+      }
+
+      fetch("/deleteTask", init)
+
+    }
+
+    const checkTaskFunction = (id) => {
+
+      let headers = new Headers({'Content-Type': 'application/x-www-form-urlencoded'})
+
+      let init = {
+          method: 'POST',
+          headers: headers,
+          body: JSON.stringify(id)
+      }
+
+      fetch("/checkTask", init)
+
+    }
+
     let screenPopup = this.state.isFormOpen ? (<Form newTask={addTaskFunction} />) : (<></>)
 
     return (
@@ -63,7 +91,7 @@ class App extends Component {
 
         {
           this.state.tasks.map((task) => {
-            return <Task key={task._id} data={task} />
+            return <Task key={task._id} data={task} deleteFunc={deleteTaskFunction} checkFunc={checkTaskFunction} />
           })
         }
         

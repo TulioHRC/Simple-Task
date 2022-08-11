@@ -41,5 +41,18 @@ module.exports = (app) => {
         })
     })
 
+    app.post('/deleteTask', urlencodedParser, (req, res) => { // Delete task of the database
+        let task = JSON.parse(Object.keys(req.body)[0]) // It's the Id of the task
+
+        tasks.find({_id: task}).remove((err, data) => {
+            if (err) console.log(err)
+        })
+    })
+
+    app.post('/checkTask', urlencodedParser, (req, res) => {
+        let task = JSON.parse(Object.keys(req.body)[0]) // It's the Id of the task
+
+    })
+
     console.log("MongoDB connection made...")
 }
