@@ -2,6 +2,10 @@
 
 Like a logbook of the development of my application, to organize the progress of the project and put the ideas somewhere.
 
+## 0.1.4v (Fast use)
+  - Check task function ???
+  - State update (faster method) ???
+
 ## 0.1.3v (To-Do)
   - New tasks function
   - Basically view tasks components, with did button
