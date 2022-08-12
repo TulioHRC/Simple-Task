@@ -5,7 +5,7 @@ class Task extends Component {
     let name = this.props.data.name
     let checked = this.props.data.checked
     let due = this.props.data.info.split(";")[1]
-    let subject = this.props.data.name.split(";")[0]
+    let subject = this.props.data.info.split(";")[0]
 
     // Date prettier
     due = `${due.split("-")[2]}-${due.split("-")[1]}-${due.split("-")[0]}`
