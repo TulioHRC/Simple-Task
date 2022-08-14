@@ -4,7 +4,7 @@ Like a logbook of the development of my application, to organize the progress of
 
 ## 0.1.4v (Fast use)
   - Check task function 
-  - State update (faster method) ???
+  - State update (faster method)
 
 ## 0.1.3v (To-Do)
   - New tasks function

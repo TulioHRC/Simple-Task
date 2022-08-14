@@ -52,6 +52,15 @@ class App extends Component {
 
       fetch("/newTask", init)
 
+      // Saving in the state
+      let cloneTasks = this.state.tasks.slice()
+      cloneTasks.push({"user": "", "name": name, "checked": false, "info": `${subject};${due}`})
+
+      this.setState((previousState) => ({
+        isFormOpen: previousState.isFormOpen,
+        tasks: cloneTasks
+      }))
+
     }
 
     const deleteTaskFunction = (id) => {
@@ -66,6 +75,17 @@ class App extends Component {
 
       fetch("/deleteTask", init)
 
+      // Saving in the state
+      let cloneTasks = this.state.tasks.slice()
+      let index = this.state.tasks.findIndex(x => x._id === id)
+
+      cloneTasks.splice(index, index)
+
+      this.setState((previousState) => ({
+        isFormOpen: previousState.isFormOpen,
+        tasks: cloneTasks
+      }))
+
     }
 
     const checkTaskFunction = (task) => {
@@ -79,6 +99,17 @@ class App extends Component {
       }
 
       fetch("/checkTask", init)
+
+      // Saving in the state
+      let cloneTasks = this.state.tasks.slice()
+      let index = this.state.tasks.findIndex(x => x._id === task._id)
+
+      cloneTasks[index]["checked"] = !cloneTasks[index]["checked"]
+
+      this.setState((previousState) => ({
+        isFormOpen: previousState.isFormOpen,
+        tasks: cloneTasks
+      }))
 
     }
 
