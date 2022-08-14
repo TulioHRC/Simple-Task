@@ -52,6 +52,11 @@ module.exports = (app) => {
     app.post('/checkTask', urlencodedParser, (req, res) => {
         let task = JSON.parse(Object.keys(req.body)[0]) // It's the Id of the task
 
+        task["checked"] = !task["checked"]
+
+        tasks.findOneAndUpdate({_id: task['_id']}, task, {upsert: true}, (err, data) => {
+            if (err) console.log(err)
+        })
     })
 
     console.log("MongoDB connection made...")
