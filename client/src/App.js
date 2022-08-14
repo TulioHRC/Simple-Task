@@ -68,14 +68,14 @@ class App extends Component {
 
     }
 
-    const checkTaskFunction = (id) => {
+    const checkTaskFunction = (task) => {
 
       let headers = new Headers({'Content-Type': 'application/x-www-form-urlencoded'})
 
       let init = {
           method: 'POST',
           headers: headers,
-          body: JSON.stringify(id)
+          body: JSON.stringify(task)
       }
 
       fetch("/checkTask", init)

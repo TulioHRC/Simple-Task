@@ -13,7 +13,7 @@ class Task extends Component {
     return (
       <div>
         <br />
-        <input type="checkbox" id={this.props.data._id} defaultChecked={checked} onChange={() => this.props.checkFunc(this.props.data._id)} />
+        <input type="checkbox" id={this.props.data._id} defaultChecked={checked} onChange={() => this.props.checkFunc(this.props.data)} />
         {name} - {subject}
         <br />
         {due}
