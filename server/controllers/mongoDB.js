@@ -24,6 +24,9 @@ let tasks = mongoose.model('tasks', taskSchema) // MongoDB model
 
 module.exports = (app) => {
 
+    app.use(bodyParser.json());
+    app.use(bodyParser.urlencoded({ extended: false }));
+
     app.get('/getTasks', urlencodedParser, (req, res) => { // Loads the data from the database
 
         tasks.find({}, (err, data) => {
