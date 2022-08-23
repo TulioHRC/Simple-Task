@@ -11,14 +11,12 @@ class Task extends Component {
     due = `${due.split("-")[2]}-${due.split("-")[1]}-${due.split("-")[0]}`
 
     return (
-      <div>
-        <br />
+      <div className='task'>
         <input type="checkbox" id={this.props.data._id} defaultChecked={checked} onChange={() => this.props.checkFunc(this.props.data)} />
         {name} - {subject}
         <br />
         {due}
         <button onClick={() => this.props.deleteFunc(this.props.data._id)}>Delete</button>
-        <br />
       </div>
     )
   }

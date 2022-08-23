@@ -2,12 +2,12 @@
 
 Like a logbook of the development of my application, to organize the progress of the project and put the ideas somewhere.
 
-## 0.1.5v (Basic Appearance) ???
+## 0.1.5v (Basic Appearance)
   - Icon Favicon HTML
   - Body CSS
-  - Task CSS
-  - Responsive CSS
-  - Form CSS 
+  - Task CSS ???
+  - Responsive CSS ???
+  - Form CSS ???
 
 ## 0.1.4v (Fast use)
   - Check task function 

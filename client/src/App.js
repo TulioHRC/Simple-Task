@@ -3,6 +3,8 @@ import React, { Component } from 'react'
 import Form from "./Components/Form" // Form that will be open when the (+) button is clicked
 import Task from './Components/Task'
 
+import './App.css'
+
 
 class App extends Component {
   
@@ -113,7 +115,7 @@ class App extends Component {
 
     }
 
-    let screenPopup = this.state.isFormOpen ? (<Form newTask={addTaskFunction} />) : (<></>)
+    let screenPopup = this.state.isFormOpen ? (<Form closeFunc={handleClickForm} newTask={addTaskFunction} />) : (<></>)
 
     return (
       <div className="App">
@@ -126,7 +128,7 @@ class App extends Component {
           })
         }
         
-        <button onClick={handleClickForm}>+</button>
+        <button className='new_bt' onClick={handleClickForm}>+</button>
       </div>
     )
   }
