@@ -12,11 +12,14 @@ class Task extends Component {
 
     return (
       <div className='task'>
-        <input type="checkbox" id={this.props.data._id} defaultChecked={checked} onChange={() => this.props.checkFunc(this.props.data)} />
-        {name} - {subject}
-        <br />
+        <div className='container'>
+          <input type="checkbox" className="check" id={this.props.data._id} defaultChecked={checked} onChange={() => this.props.checkFunc(this.props.data)} />
+          <span className='checkmark'></span>
+          {name} - {subject}
+        </div>
+        
         {due}
-        <button onClick={() => this.props.deleteFunc(this.props.data._id)}>Delete</button>
+        <button className='new_bt' id='delete_bt' onClick={() => this.props.deleteFunc(this.props.data._id)}>Delete</button>
       </div>
     )
   }

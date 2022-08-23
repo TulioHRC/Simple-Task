@@ -5,7 +5,7 @@ Like a logbook of the development of my application, to organize the progress of
 ## 0.1.5v (Basic Appearance)
   - Icon Favicon HTML
   - Body CSS
-  - Task CSS ???
+  - Task CSS
   - Responsive CSS ???
   - Form CSS ???
 
