@@ -167,7 +167,7 @@ body {
     position: relative;
     padding-left: 35px;
     margin-bottom: 12px;
-    cursor: pointer;
+
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -179,8 +179,8 @@ body {
     position: absolute;
     opacity: 0;
     cursor: pointer;
-    height: 0;
-    width: 0;
+    height: 100%;
+    width: 100%;
   }
   
   /* Create a custom checkbox */
@@ -191,6 +191,7 @@ body {
     height: 25px;
     width: 25px;
     background-color: #eee;
+    border-radius: 5px;
   }
   
   /* On mouse-over, add a grey background color */
@@ -280,4 +281,84 @@ body {
 }
 .exit_bt:active {
 	background-color:#e2d4d4;
+}
+
+/* Responsivity */
+
+@media only screen and (min-width:768px) {
+	.task {
+        font-size: 36px;
+    }
+
+    .new_bt {
+        font-size:40px;
+        padding:24px 46.5px;
+    }
+
+    .container {
+        padding-left: 50px;
+      }
+    .checkmark {
+        height: 37.5px;
+        width: 37.5px;
+      }
+    .container .checkmark:after {
+        left: 13.5px;
+        top: 7.5px;
+        width: 7.5px;
+        height: 15px;
+        border: solid white;
+        border-width: 0 4.5px 4.5px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+
+      #delete_bt {
+        padding: 10px 20px;
+        font-size: 26px;
+        box-shadow: 3px 4px 20px -1px #cc4c2c;
+    }
+}
+@media only screen and (min-width:1000px) {
+    body {
+        padding: 5% 15%;
+    }
+
+    .task {
+        font-size: 30px;
+        height: 5%;
+        padding: 2%;
+        margin-bottom: 2%;
+    }
+
+    .new_bt {
+        font-size:32px;
+        padding:16px 31px;
+    }
+
+    .container {
+        padding-left: 50px;
+      }
+    .checkmark {
+        height: 31.75px;
+        width: 31.75px;
+      }
+    .container .checkmark:after {
+        left: 11.25px;
+        top: 6.25px;
+        width: 6.25px;
+        height: 12.5px;
+        border: solid white;
+        border-width: 0 3.75px 3.75px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+
+      #delete_bt {
+        padding: 7.5px 15px;
+        font-size: 22px;
+        box-shadow: 3px 4px 20px -1px #cc4c2c;
+    }
 }

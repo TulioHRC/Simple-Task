@@ -6,7 +6,7 @@ Like a logbook of the development of my application, to organize the progress of
   - Icon Favicon HTML
   - Body CSS
   - Task CSS
-  - Responsive CSS ???
+  - Responsive CSS
   - Form CSS ???
 
 ## 0.1.4v (Fast use)

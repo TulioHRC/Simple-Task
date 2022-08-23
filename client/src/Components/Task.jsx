@@ -12,9 +12,9 @@ class Task extends Component {
 
     return (
       <div className='task'>
-        <div className='container'>
+        <div className='container' htmlFor={this.props.data._id}>
           <input type="checkbox" className="check" id={this.props.data._id} defaultChecked={checked} onChange={() => this.props.checkFunc(this.props.data)} />
-          <span className='checkmark'></span>
+          <label className='checkmark'></label>
           {name} - {subject}
         </div>
         
