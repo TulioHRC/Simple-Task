@@ -161,6 +161,7 @@ body {
     background-color: #f5514c;
 }
 
+
 /* Customize the label (the container) */
 .container {
     display: block;
@@ -251,8 +252,32 @@ body {
     border-radius: 20px;
 
     width: 80%;
-    height: 80%;
+    height: 60%;
 
+    padding: 10% 0%;
+
+}
+
+.form input { 
+    border-color:#cccccc; 
+    border-style:solid; 
+    font-size:19px; 
+    text-align:center; 
+    border-radius:12px; 
+    border-width:2px; 
+    padding:6px; 
+    text-shadow:0px 0px 2px rgba(42,42,42,.75);
+    margin-top: 10%;
+}
+.form input:focus { 
+    outline:none; 
+} 
+
+.form .new_bt {
+    position: relative;
+    margin-top: 15%;
+    left: 0;
+    top: 0;
 }
 
 #closeForm {
@@ -319,6 +344,13 @@ body {
         font-size: 26px;
         box-shadow: 3px 4px 20px -1px #cc4c2c;
     }
+    
+    .form input { 
+        font-size:30px; 
+        border-radius:18px; 
+        padding:8px; 
+    }
+
 }
 @media only screen and (min-width:1000px) {
     body {
@@ -360,5 +392,27 @@ body {
         padding: 7.5px 15px;
         font-size: 22px;
         box-shadow: 3px 4px 20px -1px #cc4c2c;
+    }
+
+    .form {
+        top: 5%;
+        left: 10%;
+        border-radius: 40px;
+        width: 80%;
+        height: 60%;
+    
+        padding: 7.5% 0%;
+    
+    }
+    
+    .form input { 
+        font-size:24px; 
+        border-radius:18px; 
+        padding:9px; 
+        margin-top: 2%;
+    }
+    
+    .form .new_bt {
+        margin-top: 5%;
     }
 }

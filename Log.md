@@ -2,12 +2,17 @@
 
 Like a logbook of the development of my application, to organize the progress of the project and put the ideas somewhere.
 
+## 0.2 (Minor fixes) ???
+  - No same tasks
+  - Deleting not working always
+
 ## 0.1.5v (Basic Appearance)
   - Icon Favicon HTML
   - Body CSS
   - Task CSS
   - Responsive CSS
-  - Form CSS ???
+  - Form CSS
+  - Form conclusion fix
 
 ## 0.1.4v (Fast use)
   - Check task function 

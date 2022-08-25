@@ -12,8 +12,12 @@ const Form = (props) => {
                 <br />
                 <input type="date" id='due' />
                 <br />
-                <button onClick={() => props.newTask(document.getElementById("name").value, document.getElementById("subject").value, 
-                                            document.getElementById("due").value)}>New</button>
+                <button className='new_bt' onClick={() => { 
+                    props.newTask(document.getElementById("name").value, document.getElementById("subject").value, 
+                                            document.getElementById("due").value)
+                    props.closeFunc()
+                }
+                }>New</button>
                 
                 <button className='exit_bt' id='closeForm' onClick={props.closeFunc}>X</button>
             </div>
