@@ -52,16 +52,7 @@ class App extends Component {
           body: JSON.stringify({"user": "", "name": name, "checked": false, "info": `${subject};${due}`})
       }
 
-      fetch("/newTask", init)
-
-      // Saving in the state
-      let cloneTasks = this.state.tasks.slice()
-      cloneTasks.push({"user": "", "name": name, "checked": false, "info": `${subject};${due}`})
-
-      this.setState((previousState) => ({
-        isFormOpen: previousState.isFormOpen,
-        tasks: cloneTasks
-      }))
+      fetch("/newTask", init).then(() => {this.loadTasks()}) // Waiting the fetch to reload database
 
     }
 
@@ -75,8 +66,8 @@ class App extends Component {
           body: JSON.stringify(id)
       }
 
-      fetch("/deleteTask", init)
-
+      fetch("/deleteTask", init) // Simple way (but in case of low loading it's slow): .then(() => {this.loadTasks()})
+      
       // Saving in the state
       let cloneTasks = this.state.tasks.slice()
       let index = this.state.tasks.findIndex(x => x._id === id)

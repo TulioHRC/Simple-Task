@@ -41,6 +41,7 @@ module.exports = (app) => {
 
         task.save((err, data) => {
             if (err) console.log(`When saving an error has occured, ${err}`)
+            else res.json(data)
         })
     })
 
@@ -49,6 +50,7 @@ module.exports = (app) => {
 
         tasks.find({_id: task}).remove((err, data) => {
             if (err) console.log(err)
+            else res.json(data)
         })
     })
 

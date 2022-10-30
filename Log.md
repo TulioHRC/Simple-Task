@@ -2,8 +2,7 @@
 
 Like a logbook of the development of my application, to organize the progress of the project and put the ideas somewhere.
 
-## 0.2 (Minor fixes) ???
-  - No same tasks
+## 0.2 (Minor fixes) 
   - Deleting not working always
 
 ## 0.1.5v (Basic Appearance)
