@@ -81,7 +81,7 @@ class App extends Component {
       let cloneTasks = this.state.tasks.slice()
       let index = this.state.tasks.findIndex(x => x._id === id)
 
-      cloneTasks.splice(index, index)
+      delete cloneTasks[`${index}`] // Removes the element that has the given index
 
       this.setState((previousState) => ({
         isFormOpen: previousState.isFormOpen,
