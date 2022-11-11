@@ -2,11 +2,13 @@
 
 Like a logbook of the development of my application, to organize the progress of the project and put the ideas somewhere.
 
-## 0.2.1 (Date Order)
+## 0.2.1v (Date Order)
 - Remaining time calculate
 - Ordening the tasks by remaining time
+- Expired dates
+- Remaining time in HTML
 
-## 0.2 (Minor fixes) 
+## 0.2v (Minor fixes) 
   - Deleting not working always
 
 ## 0.1.5v (Basic Appearance)

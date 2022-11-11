@@ -5,6 +5,7 @@ class Task extends Component {
     let name = this.props.data.name
     let checked = this.props.data.checked
     let due = this.props.data.info.split(";")[1]
+    let lastTime = this.props.data.lastTime
     let subject = this.props.data.info.split(";")[0]
 
     // Date prettier
@@ -18,7 +19,7 @@ class Task extends Component {
           {name} - {subject}
         </div>
         
-        {due}
+        {due} - ({lastTime})
         <button className='new_bt' id='delete_bt' onClick={() => this.props.deleteFunc(this.props.data._id)}>Delete</button>
       </div>
     )

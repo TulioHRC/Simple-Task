@@ -18,8 +18,15 @@ class App extends Component {
   }
 
   lastTime = (date) => {
-    const today = new Date() // Today info
-    return Math.round(Math.abs(today - new Date(date.replace("-", "/")))/(1000*60*60*24) + 0.5) // Diff in miliseconds to days (rounded to the bigger number)
+    let today = new Date() // Today info
+    today.setHours(0,0,0,0)
+    let expired = 1 // Positive or negative value for expired dates
+
+    let dateCompared = new Date(date.replace("-", "/"))
+
+    if(dateCompared < today) expired = -1
+
+    return Math.abs(today - new Date(date.replace("-", "/")))/(1000*60*60*24)*expired // Diff in miliseconds to days (rounded to the bigger number)
   }
 
   loadTasks = () => {
