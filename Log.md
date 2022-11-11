@@ -2,6 +2,10 @@
 
 Like a logbook of the development of my application, to organize the progress of the project and put the ideas somewhere.
 
+## 0.2.1 (Date Order)
+- Remaining time calculate
+- Ordening the tasks by remaining time
+
 ## 0.2 (Minor fixes) 
   - Deleting not working always
 

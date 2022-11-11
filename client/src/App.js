@@ -17,13 +17,31 @@ class App extends Component {
     }
   }
 
+  lastTime = (date) => {
+    const today = new Date() // Today info
+    return Math.round(Math.abs(today - new Date(date.replace("-", "/")))/(1000*60*60*24) + 0.5) // Diff in miliseconds to days (rounded to the bigger number)
+  }
+
   loadTasks = () => {
     fetch('/getTasks')
       .then((res) => res.json())
       .then((data) => {
+
+        let dataCopy = structuredClone(data)
+
+        for(let i = 0; i < data.length; i++){
+          dataCopy[i]["lastTime"] = this.lastTime(data[i]["info"].split(";")[1])
+        }
+
+        dataCopy.sort((a, b) => { // Ordening by remaining time
+          return a.lastTime - b.lastTime
+        })
+
+        console.log(dataCopy)
+
         this.setState((previousState) => ({
           isFormOpen: previousState.isFormOpen,
-          tasks: data
+          tasks: dataCopy
         }))
       })
   }
